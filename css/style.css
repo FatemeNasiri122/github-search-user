@@ -1,0 +1,244 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+}
+span {
+    display: inline-block;
+}
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: #0079FF;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+.back-ground-dark{
+    background-color:  #0C111C;;
+}
+.back-ground-light{
+    background-color:  #F6F8FF;
+}
+.not-available {
+    color: #878c87;
+}
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.text-light{
+    color:  #FEFEFE;
+}
+.text-dark-secondary {
+    color: #4b6a9b;
+}
+.text-light-secondary {
+    color: #cacfd3;
+}
+
+.mode{
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.mode span{
+    margin-right: .5rem;
+}
+
+.search-container{
+    width: 100%;
+    display: flex;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+    justify-content: space-between;
+}
+.search-input{
+    outline: none;
+    width: 88%;
+    background-color: transparent;
+    border: none;
+    margin-left: 10px;
+}
+.search-input::placeholder {
+    color: #878c87;
+}
+.btn-search{
+    background-color:  #0079FF;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.profile-image{
+    width: 120px;
+    height: 120px;
+    margin-right: 1rem;
+}
+.id {
+    color: #0079FF;
+    margin: 0.5rem 0;
+}
+.profile-container{
+    /* margin-top: 1rem; */
+    padding: 1rem;
+    border-radius: 10px;
+}
+.dark-container{
+    background-color:  #1E2A47;
+}
+.profile-header{
+    display: flex;
+    justify-content: space-between;
+}
+.profile-image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.name{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.nameContainer{
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+}
+.description {
+    width: 85%;
+}
+.profile-main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.follow{
+    width: 85%;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 5px;
+}
+.dark-follow{
+    background-color:  #141D2F;
+}
+
+.profile-footer{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.box-container{
+    width: 85%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.box{
+    margin: 1rem;
+    display: flex;
+    span {
+        width: 100%;
+    }
+    img {
+        width: 20px;
+        height: 20px;
+        margin-right: 1rem;
+        flex: none;
+    }
+}
+.light-container{
+    background-color:  #FEFEFE;
+}
+.light-container-follow{
+    background-color:  #F6F8FF;
+}
+.search-logo{
+    display: flex;
+    align-items: center;
+}
+.err{    
+    color: tomato;
+    margin-top: .5rem;
+}
+.hidden{
+    opacity: 0;
+    transform: translateY(100%);
+
+}
+
+.no-flex {
+    flex: 0;
+}
+
+@media (min-width:1024px) {
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .main{
+        width: 65%;
+        height: 70%;
+    }
+    .repos{
+        padding: 1rem;
+    }
+}
+@media (max-width:1024px) {
+    .container{
+        padding: 2rem 0.5rem;
+        font-size: 14px;
+    }
+    .profile-main ,.profile-footer{
+        overflow: hidden;
+        width: 100%;
+        justify-content: center;
+    }
+    .name{
+        flex-direction: column;
+    }
+    .profile-image{
+    width: 80px;
+    height: 80px;
+    
+}
+    .box-container{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .box{
+        margin-bottom: 0.5rem;
+    }
+    .description{
+        margin-top: 2rem;
+    }
+
+    .nameContainer {
+        justify-content: space-between;
+    }
+
+    .follow , .nameContainer, .box-container, .description{
+    width: 100%;
+}
+    .follow {
+            padding: 0.5rem;
+
+    }
+}
